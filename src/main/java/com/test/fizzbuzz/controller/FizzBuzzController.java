@@ -16,7 +16,7 @@ import org.springframework.web.bind.annotation.RestController;
 
 import java.util.List;
 
-@RestController
+@Controller
 @RequestMapping("/api/v1")
 @AllArgsConstructor
 @Tag(name = "FizzBuzz Operations", description = "APIs for FizzBuzz generation")
@@ -42,8 +42,8 @@ public class FizzBuzzController {
             )
     })
     @GetMapping("/fizzbuzz/{number}")
-    public ResponseEntity<List<String>> getFizzBuzzList(@PathVariable("number") int number) {
-        return ResponseEntity.ok(fizzBuzzService.getFizzBuzzList(number));
+    public Response<List<String>> getFizzBuzzList(@PathVariable("number") int number) {
+        return Response.ok(fizzBuzzService.getFizzBuzzList(number));
     }
 
 }
