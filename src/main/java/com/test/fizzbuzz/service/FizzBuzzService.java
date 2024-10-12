@@ -4,5 +4,5 @@ import java.util.List;
 
 public interface FizzBuzzService {
 
-    List<String> getFizzBuzzList(int number);
+    public List<String> getFizzBuzzList(int number);
 }
